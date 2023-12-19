@@ -7,8 +7,9 @@ exports.getAllTodos = async (req, res) => {
     const todos = await Todo.find({}).sort({ createdAt: -1 });
 
     try {
-      
+
       res.status(200).json({
+        
         message: "Get all todos successfully.",
        
         todos: todos,
